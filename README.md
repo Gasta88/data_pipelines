@@ -26,9 +26,9 @@ The data lake `sparkifydd` holds information about songs played and relative met
 The Airflow pipeline uses custom operators to peform specific actions:
 
    - `StageToRedshiftOperator`: copy data from JSON files to staging tables in `sparkifydb`
-    - `LoadFactOperator`: load data from staging table to fact table. It is possible to append data or delete-load by chaning the *append_mode* parameter
-    - `LoadDimensionOperator`: load data from staging table to dimension tables. It is possible to append data or delete-load by chaning the *append_mode* parameter
-    - `DataQualityOperator`: run QC check specified in the main script on the star schema to make sure that data are compliant with requirements
+   - `LoadFactOperator`: load data from staging table to fact table. It is possible to append data or delete-load by chaning the *append_mode* parameter
+   - `LoadDimensionOperator`: load data from staging table to dimension tables. It is possible to append data or delete-load by chaning the *append_mode* parameter
+   - `DataQualityOperator`: run QC check specified in the main script on the star schema to make sure that data are compliant with requirements
 
 The main DAG is setup with the following default arguments:
    - start_date
